@@ -1,1 +1,82 @@
-# Weather-Forecast
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Weather Forecast</title>
+</head>
+
+
+<body>
+    <!-- header -->
+    <header class="hero">
+        <h1 class="display-4 text-center">Weather Dashboard</h1>
+    </header>
+
+    <main class="row">
+        <!-- search form -->
+        <div class="col-3">
+        <div class="search-history">
+            <form class="form-group">
+                <label for="city" id="title">Search for a City:</label>
+                <input type="text" class="form-control" id="city-input">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
+            <!-- search history -->
+            <div class="list-group col-3 text-center">Cities</div>
+        
+        </div>
+
+        
+         <!-- display selected city Weather -->
+         <div class="col-8">
+            <!-- weather details -->
+            <div id="current-tab">
+                <h2 id="city">Today<span id="today"></span></h2>
+                <div id="current-weather"></div>
+            </div>
+
+            <!-- 5-Day Forecast -->
+            <div id="forecast-tab">
+                <h3 id="future-dates">5-Day Forecast:</h3>
+                <div>
+                    <div class="row" id="forecast"></div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/javascript.js"></script>
+</body>
+</html>
