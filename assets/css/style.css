@@ -46,4 +46,19 @@ main {
     border: 2px solid #080808;
   
   }
+
+.list-group-item {
+  font-size: 15px;
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: rgb(169, 170, 173);
+  color: var(--secondary);
+  margin-left: 10px;
+}
+
+
+
+
   
