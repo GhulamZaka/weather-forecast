@@ -44,6 +44,7 @@ main {
   }
   #current-tab {
     border: 2px solid #080808;
+    height: 350px;
   
   }
 
@@ -56,6 +57,10 @@ main {
   background-color: rgb(169, 170, 173);
   color: var(--secondary);
   margin-left: 10px;
+}
+
+#forecast-tab {
+  margin-top: 10px;
 }
 
 
