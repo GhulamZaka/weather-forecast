@@ -44,8 +44,12 @@ main {
   }
   #current-tab {
     border: 2px solid #080808;
-    height: 350px;
+    height: 300px;
   
+  }
+  #current-tab {
+    padding-left: 10px;
+    font-size: 20px;
   }
 
 .list-group-item {
@@ -61,6 +65,14 @@ main {
 
 #forecast-tab {
   margin-top: 10px;
+}
+
+#forecast {
+  justify-content: space-around;
+}
+.card {
+  background-color: rgb(19, 52, 95);
+  color: var(--primary);
 }
 
 
