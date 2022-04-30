@@ -9,11 +9,10 @@ function savedCity(event) {
 
     cityInput = $("#city-input").val();
     console.log(cityInput);
-    localStorage.setItem("savedCity", JSON.stringify(cityArray));
     searchHistory.empty();
 
 
-    displayList();
+    
     getCurrentWeather();
 }
     
@@ -24,7 +23,6 @@ function displayList() {
         searchHistory.append(cityList);
     }
 }
-
 displayList();
 searchBtn.click(savedCity);
 
@@ -40,17 +38,34 @@ function getCurrentWeather() {
             return response.json()
         }
         else {
-            alert("Error");
+            alert("Error: Please enter a city name.");
         }
     })
     .then(function (data) {
+
       displayCurrentWeather(data);
        getForecast(data);
         console.log(data);
+        console.log(cityArray);
+
+        var index = cityArray.findIndex(function(city) {
+            return city === data.name
+        });
+        
+
+        if (index === -1) {
+        cityArray.push(data.name);
+        localStorage.setItem("savedCity", JSON.stringify(cityArray));
+        }
+        
+        displayList();
     }) 
-    .catch(function(error) {
-        alert("Unable to find");
-    });
+
+    .catch(function() {
+        alert("Unable to find the city.");
+        displayList();
+    })
+    
 };
 
   //  Displaying current weather
