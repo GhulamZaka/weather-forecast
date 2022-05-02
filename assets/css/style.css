@@ -76,6 +76,19 @@ main {
   color: var(--primary);
 }
 
+.green {
+  background-color: green;
+}
+.red {
+  background-color: red;
+}
+.yellow {
+  background-color: yellow;
+}
+.orange {
+  background-color: orange;
+}
+
 
 
 

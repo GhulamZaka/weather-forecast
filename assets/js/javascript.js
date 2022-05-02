@@ -17,7 +17,7 @@ function savedCity(event) {
 }
     
    // Displaying the saved cities 
-function displayList() {
+    function displayList() {
     for (var i = 0; i < cityArray.length; i++) {
         var cityList = $("<li>").addClass("list-group-item"). text(cityArray [i]);
         searchHistory.append(cityList);
@@ -87,6 +87,21 @@ function getCurrentWeather() {
     currentWeatherEl.append(city, currentTemp, currentWind, currentHumidity);
   };
   
+
+// get 5-day forecast API
+var getForecast = function (data) {
+    var cityLat = data.coord.lat;
+    var cityLon = data.coord.lon;
+
+    var forecastUrl ="https://api.openweathermap.org/data/2.5/onecall?lat=" + cityLat +"&lon=" + cityLon +"&exclude=minutely,hourly&appid=60912993e53c4b95122f3139db219ebb";
+  
+    fetch(forecastUrl).then(function (response) {
+      response.json().then(function (data) {
+        displayForecast(data);
+      });
+    });
+  };
+
 
 // get 5-day forecast API
 var getForecast = function (data) {
